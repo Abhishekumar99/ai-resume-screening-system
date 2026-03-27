@@ -3,7 +3,18 @@ import streamlit as st
 from parser import extract_text_from_pdf
 from nlp_processing import preprocess_text
 from model import calculate_similarity, get_missing_skills
-
+st.set_page_config(
+    page_title="AI Resume Screening",
+    layout="centered",
+    initial_sidebar_state="collapsed"
+)
+st.markdown("""
+    <style>
+    .main {
+        padding-top: 20px;
+    }
+    </style>
+""", unsafe_allow_html=True)
 st.set_page_config(page_title="AI Resume Screener", layout="centered")
 st.markdown("---")
 st.set_page_config(page_title="AI Resume Screener", layout="centered")
