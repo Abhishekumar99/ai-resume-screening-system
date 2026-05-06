@@ -1,5 +1,6 @@
 # 🎨 Streamlit UI Upgrade for AI Resume Screening System
 
+
 import streamlit as st
 from parser import extract_text_from_pdf
 from nlp_processing import preprocess_text
@@ -32,7 +33,7 @@ h1 {
     text-align: center;
     color: #A0A0A0;
     font-size: 18px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .stButton>button {
@@ -85,9 +86,52 @@ def extract_skills(text):
 
 
 # ================= HEADER =================
-st.markdown("<h1>🧠 AI Resume Screening System</h1>", unsafe_allow_html=True)
 st.markdown(
-    "<div class='subtitle'>Analyze resumes with AI-powered ATS matching</div>",
+    """
+    <style>
+    .hero-container {
+        background: linear-gradient(90deg, #1E3A8A, #2563EB);
+        padding: 40px 20px;
+        border-radius: 22px;
+        text-align: center;
+        margin-bottom: 25px;
+        box-shadow: 0px 4px 20px rgba(0,0,0,0.35);
+    }
+
+    .hero-title {
+        color: white;
+        font-weight: 800;
+        line-height: 1.2;
+        margin: 0;
+        font-size: 64px;
+    }
+
+    .hero-subtitle {
+        color: #E0E7FF;
+        font-size: 20px;
+        margin-top: 12px;
+    }
+
+    @media (max-width: 768px) {
+        .hero-title {
+            font-size: 42px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+        }
+
+        .hero-container {
+            padding: 30px 15px;
+        }
+    }
+    </style>
+
+    <div class="hero-container">
+        <h1 class="hero-title">🧠 AI Resume Screening System</h1>
+        <div class="hero-subtitle">AI-Powered ATS Resume Analyzer</div>
+    </div>
+    """,
     unsafe_allow_html=True
 )
 
@@ -179,4 +223,10 @@ if st.button("🚀 Analyze Resume"):
 # ================= FOOTER =================
 st.markdown("---")
 st.caption("Built with ❤️ using Python, NLP, Scikit-learn, and Streamlit")
+
+
+
+
+
+
 
